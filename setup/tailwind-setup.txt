@@ -1,0 +1,38 @@
+////////////////
+Installs dependencies
+////////////////
+npm i postcss-cli tailwindcss autoprefixer@^9.8.6 postcss
+
+////////////////
+creates a tailwind.config.js
+////////////////
+
+npx tailwindcss init --full 
+
+////////////////
+This is where tailwind is added and then complied to 
+////////////////
+create src\styles\main.css and src\styles\tailwind.css
+
+In src\styles\tailwind.css, add
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+create: postcss.config.js and add this
+
+const tailwindcss = require("tailwindcss");
+
+module.exports = {
+  plugins: [tailwindcss("./tailwind.config.js"), require("autoprefixer")],
+};
+
+in package.json in scripts
+"build:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
+
+Now, tailwind code should be there in main
+
+add import "./styles/main.css"; in index.js
+
+
+
