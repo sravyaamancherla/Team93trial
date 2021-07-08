@@ -50,7 +50,7 @@ const UpdateProfile = () => {
             className="form__input"
             type="email"
             ref={emailRef}
-            defaultValue={currentUser.email}
+            defaultValue={currentUser ? currentUser.email : ""}
             required
           ></input>
         </div>

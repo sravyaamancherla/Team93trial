@@ -10,12 +10,12 @@ import "./index-components.css";
 const Main = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   return (
-    <div className={`${isSideBarOpen ? "main-grid" : "main-grid-collapsed"}`}>
+    <div>
       <Router>
-        <Sidebar
+        {/* <Sidebar
           setIsSideBarOpen={setIsSideBarOpen}
           isSideBarOpen={isSideBarOpen}
-        />
+        /> */}
         <Navbar />
         <div className="main-content">
           <Switch>

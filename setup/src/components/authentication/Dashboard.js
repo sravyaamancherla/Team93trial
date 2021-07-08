@@ -5,14 +5,16 @@ const Dashboard = () => {
   const { currentUser, logout } = useAuth();
 
   return (
-    <div>
-      <h1>From Dashboard</h1>
+    <>
+      {/* <div>
+        <h1>From Dashboard</h1>
+        <p>{currentUser && currentUser.email}</p>
+      </div> */}
       {/* {console.log(currentUser)} */}
       {/* {error && <p>{error}</p>} */}
-      <p>{currentUser && currentUser.email}</p>
 
       {/* <Link to="/main/update-profile">Update Profile</Link> */}
-    </div>
+    </>
   );
 };
 
