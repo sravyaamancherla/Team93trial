@@ -21,7 +21,7 @@
   grid-area: main-content;
   background: #f6f7f9;
   max-height: 100vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .main-navbar {
   grid-area: main-navbar;
